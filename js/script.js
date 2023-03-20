@@ -33,6 +33,10 @@ function showAllBombs(bombs){
         }
     }
 }
+function setMessage(message){
+    score = document.getElementById('score');
+    score.innerHTML = message;
+};
 
 //  FUNZIONE PER FAR PARTIRE IL GIOCO
 function play(e) {
@@ -65,6 +69,9 @@ function play(e) {
 
   const bombs = generateBombs(NUM_BOMBS, squareNmr);
   console.log(bombs);
+
+ 
+  let safeSquare = parseInt(0);
   let maxScore = squareNmr - numBombs;
 
   // num celle creo la cella con funzione drawSquare
@@ -81,24 +88,15 @@ function play(e) {
                 gameOver = true;
                 showAllBombs(bombs);
               } else {
+                safeSquare++;
+                message = `<h3 class=" text-white "> Il tuo punteggio è : ${safeSquare} </div>`;
                 square.classList.add("safe");
-              } 
+              } setMessage(message);
         }
-    
+
+ 
     });
+
     playground.appendChild(square);
   }
-}
-var counterVal = 0;
-function incrementClick() {
-  updateDisplay(++counterVal);
-}
-
-function resetCounter() {
-  counterVal = 0;
-  updateDisplay(counterVal);
-}
-
-function updateDisplay(val) {
-  document.getElementById("counter-label").innerHTML = val;
 }
