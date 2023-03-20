@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="wrapper">
   <header>
     <div class="container d-flex justify-content-between align-items-center">
       <h1>Campo minato</h1>
@@ -27,16 +27,13 @@
           </select>
         </div>
         <button class="btn btn-warning ms-4" type="submit">Play</button>
-
-
       </form>
-
   </header>
+
   <main>
-    <div class="wrapper">
+    <div>
       <div class="container d-flex justify-content-center h-100 align-items-center flex-column flex-wrap">
-        <div id="playground">
-        </div>
+        <div id="playground" class="mt-4">  </div>
         <div class="text-center fs-3">
           <h3 id="score"></h3>
         </div>
@@ -47,13 +44,12 @@
 
   </main>
   <footer>
+
     <div class="container h-100 d-flex align-items-center fs-6">
       Made with &hearts; by class 92
     </div>
 
   </footer>
-  </div>
-
 
   <script src="./js/function.js"></script>
   <script src="./js/script.js"></script>

@@ -89,7 +89,7 @@ function play(e) {
                 showAllBombs(bombs);
               } else {
                 safeSquare++;
-                message = `<h3 class=" text-white "> Il tuo punteggio è : ${safeSquare} </div>`;
+                message = `<h3 class=" mt-3 "> Il tuo punteggio è : ${safeSquare} </div>`;
                 square.classList.add("safe");
               } setMessage(message);
         }
